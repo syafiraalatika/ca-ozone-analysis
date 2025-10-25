@@ -1,4 +1,4 @@
-# California Ozone Watch: A Data-Driven Analysis
+# California Ozone Analysis: A Data-Driven Analysis
 
 California Air Quality Monitoring
 
@@ -30,13 +30,30 @@ The goal was to evaluate ozone pollution in California using a raw EPA dataset. 
 ### 3. Key Findings
 * **Geospatial:** Pollution is not a statewide problem. It is hyper-concentrated in two hotspots: **Southern California** (San Bernardino, Riverside) and the **Central Valley** (Tulare, Kern). Coastal areas remain consistently clean.
 * **Temporal:** Pollution is overwhelmingly a **seasonal, summer phenomenon**, with average concentrations 36.6% higher than in winter.
-* **Data Integrity:** A systemic discrepancy was found between monitoring methods, with `Method Code 199.0` consistently **under-reporting** ozone levels compared to other common methods.
+* **Data Integrity:** A systemic discrepancy was found between monitoring methods, with `Method Code 199.0` consistently **under-reporting** ozone levels.
 
-### 4. Visualizations
-In addition to the main `folium` map, the analysis includes:
-* A **Histogram** of ozone distribution, annotated with EPA "Moderate" and "Unhealthy" thresholds.
-* **Boxplots** comparing seasonal (Summer vs. Winter) and weekly (Weekday vs. Weekend) trends.
-* A **Horizontal Bar Chart** identifying the Top 10 most polluted counties.
+---
+
+## Key Visualizations
+
+This section includes the static plots that support our findings.
+
+### 1. The "What": Distribution of Ozone
+Most days are "Good," but a long tail of severe "Unhealthy" days drives the problem.
+![OZone Distribution Histogram](./images/ozone_distribution_histogram.png)
+
+### 2. The "When": Seasonal & Weekly Trends
+Pollution is overwhelmingly a summer problem and is measurably higher on weekdays.
+![Seasonal Boxplot](./images/seasonal_ozone_boxplot.png)
+![Weekday Boxplot](./images/weekend_ozone_boxplot.png)
+
+### 3. The "Where": Top 10 Hotspots
+Pollution is concentrated in specific counties, as shown by the bar chart.
+![Top 10 Counties Bar Chart](./images/top_10_counties_barchart.png)
+
+### 4. The "How": Data Integrity
+We found systemic differences between monitoring methods.
+![Method Code Boxplot](./images/method_code_boxplot.png)
 
 ---
 
@@ -53,3 +70,26 @@ Our analysis leads to a clear, three-part strategy:
 
 #### III. Future Work
 * **Build a Predictive Warning System:** Integrate this EPA data with meteorological data (temperature, wind) to build a machine learning model that can forecast high-pollution days in advance.
+
+---
+
+## Installation & Usage
+
+Usage
+1. Clone this repository: git clone [https://github.com/syafiraalatika/ca-ozone-analysis.git](https://github.com/syafiraalatika/ca-ozone-analysis.git)
+2. Navigate to the directory: cd ca-ozone-analysis
+3. Open the notebook-revised.ipynb file in a Jupyter environment (like Jupyter Lab, VS Code, or Google Colab).
+4. Run the cells from top to bottom. The ozone.csv dataset is included in the repository.
+
+### Installation
+
+To run this analysis yourself, you will need the following libraries:
+* `pandas`
+* `numpy`
+* `matplotlib`
+* `seaborn`
+* `folium`
+
+You can install them using pip:
+```bash
+pip install pandas numpy matplotlib seaborn folium
