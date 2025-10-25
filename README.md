@@ -12,7 +12,7 @@ This project analyzes a 54k-row EPA dataset to identify ozone pollution drivers.
 
 The primary finding is the geographic concentration of pollution. The interactive map visualizes the hotspots (red/orange) and clean zones (blue/green) across California.
 
-**[Click here to view the full-screen interactive heatmap](https://htmlpreview.github.io/?https://github.com/syafiraalatika/california-ozone-watch/blob/main/ozone_heatmap_with_basemap.html)**
+**[Click here to view the full-screen interactive heatmap](https://htmlpreview.github.io/?https://github.com/syafiraalatika/ca-ozone-analysis/blob/main/ozone_heatmap_with_basemap.html)**
 
 ---
 
